@@ -1,16 +1,22 @@
-## Hi there 👋
+# Mechanical Engineering Portfolio
 
-<!--
-**andrew-antonopoulos/andrew-antonopoulos** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This repository contains files for my personal mechanical engineering portfolio website.
 
-Here are some ideas to get you started:
+The site showcases selected engineering projects, including design, CAD, analysis, prototyping, and testing work.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Portfolio Website
+
+Visit the site here:
+
+https://andrew-antonopoulos.github.io
+
+## About
+
+I am sophomore mechanical engineering student at Boston University interested in the manufacturing, aerospace, and automotive fields.
+
+This portfolio serves as an extension of my resume to provide more detail about the projects I have worked on.
+
+## Featured Projects
+1.
+2.
+3.
