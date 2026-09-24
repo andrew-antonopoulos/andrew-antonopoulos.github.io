@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Kanit:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #222;
+    font-family: 'IBM Plex Sans', Arial, sans-serif; /* replace the old font-family line */
+    line-height: 1.6;
+    background: #f3f6fa;
+    color: #243043;
+}
+
+h1, h2, h3 {
+    font-family: 'Kanit', Arial, sans-serif;
 }
 
 header {
