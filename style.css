@@ -61,6 +61,25 @@ a:hover {
     text-decoration: underline;
 }
 
+a:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 4px;
+}
+
+.portfolio-nav {
+    margin-bottom: 30px;
+}
+
+.project-preview + .project-preview {
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.project-preview p:last-child {
+    margin-bottom: 0;
+}
+
 .project-image {
     display: block;
     width: 100%;
