@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hybrid rocket nozzle design for BURPG: an 80% bell nozzle, SOLIDWORKS modeling, static pressure analysis, and a three-second static fire.">
     <title>Hybrid Rocket Nozzle | Andrew Antonopoulos</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
     <header>
         <h1>Andrew G.P. Antonopoulos</h1>
         <p>Mechanical Engineering Portfolio</p>
     </header>
-
     <main>
         <nav class="portfolio-nav" aria-label="Portfolio navigation">
             <a href="../index.html#projects">&larr; Back to projects</a>
@@ -21,17 +19,60 @@
 
         <section>
             <h2>Hybrid Rocket Nozzle Design, Simulation, and Testing</h2>
-            <p>
-                I designed and modeled a nozzle for BURPG’s hybrid introduction project.
-                My work included thrust-efficiency calculations, SOLIDWORKS modeling,
-                and SOLIDWORKS simulation. These simulations included finite element analysis
-                (FEA) to evaluate stress, displacement, and factor of safety under pressure,
-                which adhered to NASA-STD-5005D requirements: minimum factors of safety of 2
-                against yielding and 3 against ultimate failure. The design progressed through
-                multiple reviews and completed a successful three-second static fire with no structural damage.
-            </p>
+            <p>I designed and modeled a nozzle for Boston University Rocket Propulsion Group&rsquo;s hybrid introduction project. My work focused on nozzle performance calculations, SOLIDWORKS part and assembly modeling, and finite element analysis (FEA) of the nozzle under pressure. The project progressed through design reviews and culminated in a successful three-second static fire with no structural damage.</p>
+            <p><strong>Skills:</strong> nozzle performance analysis, SOLIDWORKS, mechanical drawings, static FEA, and design for additive manufacturing.</p>
+            <p><strong>Team 18:</strong> Zoe Green, Alex Atanassov, Simeon Tcholakov, and Andrew Antonopoulos.</p>
+        </section>
+
+        <section>
+            <h2>Nozzle Design and Performance</h2>
+            <p>We compared a conical nozzle with 60% and 80% bell configurations and selected the 80% bell. The curved expansion contour was chosen to reduce exhaust divergence losses while balancing nozzle length, material use, and weight. The design calculations informed the throat, exit, and bell geometry used in the CAD model.</p>
+            <ul>
+                <li><strong>Throat diameter:</strong> approximately 7.22 mm.</li>
+                <li><strong>Exit diameter:</strong> approximately 18.45 mm.</li>
+                <li><strong>80% bell length:</strong> approximately 16.75 mm, compared with 20.95 mm for the calculated conical reference.</li>
+            </ul>
+            <p>These dimensions are calculated design values from the critical design review (CDR), rather than measurements of the manufactured part.</p>
+        </section>
+
+        <section>
+            <h2>SOLIDWORKS Modeling and Assembly</h2>
+            <p>I developed the nozzle part, assembly views, and mechanical drawing in SOLIDWORKS. The model integrated the converging section, throat, bell-shaped expansion section, and mounting flange. Assembly views showed the nozzle interface and fastener arrangement, while the drawing documented the geometry for manufacturing. The drawing lists a modeled part mass of 0.05 lb.</p>
+            <figure style="margin: 24px 0;">
+                <img src="../images/hybrid-rocket-nozzle/assembly.png" alt="Isometric SOLIDWORKS assembly of the bell nozzle and bolted mounting flange" class="project-image" loading="lazy">
+                <figcaption>SOLIDWORKS nozzle assembly presented at the critical design review.</figcaption>
+            </figure>
+            <figure style="margin: 24px 0;">
+                <img src="../images/hybrid-rocket-nozzle/drawing.png" alt="Mechanical drawing of the nozzle with dimensioned views and an isometric view" class="project-image" loading="lazy">
+                <figcaption>Mechanical drawing documenting the nozzle geometry.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Structural Simulation</h2>
+            <p>I used SOLIDWORKS Simulation to evaluate von Mises stress, factor of safety, and displacement in a static pressure study. The CDR specifies ABS resin, a pressure load of 46.27 psi derived from the throat-pressure calculation, and the default mesh size.</p>
+            <p>The stress plot shows a maximum von Mises stress of approximately 1.69 MPa, and the factor-of-safety plot shows a minimum of approximately 22.2 for the modeled conditions. These results describe the static pressure model; they do not establish thermal performance or the strength of an actual printed part under hot-fire conditions.</p>
+            <figure style="margin: 24px 0;">
+                <img src="../images/hybrid-rocket-nozzle/stress.png" alt="SOLIDWORKS von Mises stress plot with a maximum of approximately 1.69 MPa for the static pressure study" class="project-image" loading="lazy">
+                <figcaption>Static stress distribution for the ABS resin model.</figcaption>
+            </figure>
+            <figure style="margin: 24px 0;">
+                <img src="../images/hybrid-rocket-nozzle/factor-of-safety.png" alt="SOLIDWORKS factor-of-safety plot with a minimum of approximately 22.2 under the modeled static load" class="project-image" loading="lazy">
+                <figcaption>Factor of safety under the modeled static pressure load.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Manufacturing Plan</h2>
+            <p>The CDR proposed 3D printing the nozzle in ABS, with a vertical print orientation and a geometry intended to avoid difficult internal supports. The 80% bell configuration also reduced the planned material use and print time. These were manufacturing considerations presented during design review.</p>
+        </section>
+
+        <section>
+            <h2>Testing and Results</h2>
+            <p>The project completed a successful three-second static fire with no structural damage. This test outcome is separate from the CDR&rsquo;s theoretical performance calculations and static simulation results.</p>
+            <img src="../images/B3450C69-A834-422C-A26D-8ADAD124F1A7_1_201_a.jpeg" alt="Hybrid rocket static-fire test" class="project-image" loading="lazy">
+            <p><a href="https://docs.google.com/presentation/d/1uGf0pezA_uCeJ1GD9ry5gwnMD-42lFFjmdxuFW3OoUc/edit">View Team 18&rsquo;s critical design review presentation</a> (April 16, 2026). The presentation includes the nozzle calculations, CAD views, structural analysis, manufacturing plan, and the team&rsquo;s electronics work.</p>
         </section>
     </main>
 </body>
-
 </html>
