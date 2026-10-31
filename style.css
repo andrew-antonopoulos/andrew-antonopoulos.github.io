@@ -99,3 +99,19 @@ a:focus-visible {
     font-size: 0.95rem;
     text-align: center;
 }
+
+/* Tight enclosure crop for the homepage preview only. */
+.temperature-monitor-preview {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.temperature-monitor-preview img {
+    position: absolute;
+    width: 130.1695%;
+    max-width: none;
+    height: auto;
+    left: -16.9492%;
+    top: -24.5763%;
+}
