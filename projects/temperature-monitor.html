@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An Arduino room temperature monitor combining CAD enclosure design, soldered circuits, an LCD display, and visual and audible temperature alerts.">
+    <title>Room Temperature Monitor | Andrew Antonopoulos</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>Andrew G.P. Antonopoulos</h1>
+        <p>Mechanical Engineering Portfolio</p>
+    </header>
+    <main>
+        <nav class="portfolio-nav" aria-label="Portfolio navigation">
+            <a href="../index.html#projects">&larr; Back to projects</a>
+        </nav>
+
+        <section>
+            <h2>Room Temperature Monitor</h2>
+            <p>I designed and built a room temperature monitor for EK131, taking the project from component measurements and CAD modeling through circuit assembly, soldering, and Arduino programming. The finished prototype displays temperature in Fahrenheit and Celsius and alerts the user when the room falls outside a programmed comfort range of 67&ndash;72&deg;F.</p>
+            <p><strong>Skills:</strong> CAD, mechanical drawings, circuit design, soldering, Arduino programming, and prototype assembly.</p>
+        </section>
+
+        <section>
+            <h2>Enclosure Design</h2>
+            <p>I measured the individual components before modeling the enclosure and lid in CAD. The layout had to accommodate the Arduino Uno, 9V battery, sensor, buzzer, LEDs, switch, LCD, and connecting wires while keeping the display and controls accessible. A laser-cut Arduino mounting plate and a 3D-printed battery holder helped secure the internal components.</p>
+            <figure class="monitor-figure">
+                <img src="../images/temperature-monitor/cad-assembly.png" alt="Isometric CAD view of the temperature monitor enclosure, internal components, and separate lid with LCD opening" class="project-image" loading="lazy">
+                <figcaption>Final CAD assembly in isometric view, with the lid separated to show the component layout.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Electronics and Assembly</h2>
+            <p>The Arduino reads a TMP36 temperature sensor and drives a 16&times;2 I2C LCD, green and red LEDs, and a buzzer. I soldered the TMP36 and buzzer to their respective circuit boards and used 22 AWG solid-core wire for the soldered connections. Jumper wires connected the LCD, while grouped 5V and ground connections simplified the wiring inside the enclosure.</p>
+            <p>I used Ohm&rsquo;s law and Kirchhoff&rsquo;s voltage law to select the LED resistors: 1 k&Omega; for the green LED and 220 &Omega; for the red LED. The prototype runs from a switched 9V battery, with the Arduino supplying 5V to the connected components.</p>
+            <figure class="monitor-figure">
+                <img src="../images/temperature-monitor/internal-wiring.jpg" alt="Open temperature monitor showing the Arduino Uno, soldered wiring, grouped power connections, and 9V battery" class="project-image" loading="lazy">
+                <figcaption>Internal components and wiring of the assembled prototype.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Programming and Operation</h2>
+            <p>The program converts the TMP36 analog reading to a voltage, calculates temperature in Celsius, and converts it to Fahrenheit. The LCD displays both units along with the current status.</p>
+            <ul>
+                <li><strong>67&ndash;72&deg;F:</strong> the green LED stays on, the buzzer stays off, and the LCD reads &ldquo;Status: Normal.&rdquo;</li>
+                <li><strong>Below 67&deg;F or above 72&deg;F:</strong> the green LED turns off, the red LED flashes, the buzzer beeps, and the LCD reads &ldquo;Outside of range.&rdquo;</li>
+            </ul>
+            <figure class="monitor-figure">
+                <img src="../images/temperature-monitor/working-prototype.jpg" alt="Completed temperature monitor operating with its LCD displaying 69F, 21C, and Status: Normal" class="project-image" loading="lazy">
+                <figcaption>The finished monitor operating at 69&deg;F (21&deg;C), within the programmed comfort range.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Results and Future Improvements</h2>
+            <p>The functioning prototype met the project goal: measuring room temperature, displaying a clear status, and providing visual and audible alerts outside the selected range. All components fit within the enclosure and were secured for assembly.</p>
+            <p>The main improvement would be a more suitable long-term power source, such as an AC/DC adapter in place of the prototype&rsquo;s 9V battery. A smaller enclosure and Arduino Nano could also reduce the overall size, although the tighter layout would make wiring more challenging.</p>
+            <p><a href="https://docs.google.com/document/d/1CuA2py5D-lUH9l0-O0qaNUSFWDkDpryASezhaKJMDxU/edit">Read the full engineering report</a></p>
+        </section>
+    </main>
+</body>
+</html>
